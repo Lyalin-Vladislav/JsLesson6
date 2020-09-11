@@ -1,0 +1,162 @@
+@font-face {
+	font-family: 'Lato'; 
+	src: url("../font/Lato-Light.ttf");
+}
+@font-face {
+	font-family: 'Lato Bold'; 
+	src: url("../font/Lato-Bold.ttf");
+}
+@font-face {
+	font-family: 'Lato-Regular'; 
+	src: url("../font/Lato-Regular.ttf");
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+	max-width: 1600px;
+	min-width: 860px;
+	margin: 0 auto;
+}
+.heder {
+	padding: 0 15px;
+}
+@media (min-width: 991.98px) {
+  .heder {
+    padding: 0 calc(50vw - 480px);
+  }
+}
+
+@media (min-width: 1199.98px){
+  .heder {
+    padding: 0 calc(50vw - 570px);
+  }
+}
+.top {
+		margin-top: 25px;
+		margin-bottom: 24px;
+	}
+
+.logo{
+	float: left;
+	display: inline-block;
+}
+.logo a {
+	text-decoration: none;
+	font-family:  "Lato";
+	color: #000;
+}
+.lastletter{
+	text-transform: uppercase;
+	font-size: 27px;
+	font-weight: 300;
+	font-family: "Lato";
+}
+.lastletter span{
+	color: #f16d7f;
+	font-weight: bold;
+	font-weight: 900;
+	font-family: 'Lato Bold';
+}
+
+.logo ul{
+	list-style-type: none;
+}
+.logo ul li{
+	display: inline-block;
+	vertical-align: middle;
+	padding-right: 13px;
+}
+.serch {
+	display: inline-block;
+	float: left;
+	margin-left: 10px;
+	margin-top: 7px;
+	height: 39px;
+	border:1px solid #e6e6e6;
+	border-radius: 5px;
+	
+}
+.serch-first {
+	font-family: 'Lato';
+	color: #000;
+	display: inline-block;
+	float: left;
+	height: 37px;
+	width: 87px;
+	font-size: 14px;
+	font-weight: 300;
+	border-right: 1px solid #e6e6e6;
+	text-align: center;
+	text-decoration: none;
+
+	padding-top: 8px;
+	box-sizing: border-box;
+	background-image: linear-gradient(to top, #f9f9f9, #f5f5f5);
+}
+.point {
+	float: right;
+	margin-right: 10px;
+	margin-top: 6px;
+}
+
+.serch input {
+	width: 317px;
+	height: 37px;
+	border: none;
+	font-family: 'Lato';
+	font-size: 14px;
+	font-weight: 300;
+	color: rgba(164, 164, 164, 1);	
+	padding-left: 16px;
+}
+.serch-last {
+	float: right;
+	display: inline-block;
+	height: 37px;
+	width: 36px;
+	border-left: 1px solid #e6e6e6;
+	text-align: center;
+	padding-top: 12px;
+	background-image: linear-gradient(to top, #f9f9f9, #f5f5f5);
+}
+.basket {
+	padding-top: 13px;
+}
+.basket-account {
+	float: right;	
+}
+.basket-account a {
+display: inline-block;
+}
+.basket-account .account {
+	float: right;
+	font-size: 15px;
+	font-family: 'Lato';
+	color: rgba(255, 255, 255, 1);
+	height: 38px;
+	width: 130px;
+	object-fit: contain;
+	background-color: #f16d7f;
+	margin-right: 1px;
+	margin-left: 26px;
+	margin-top: 6px;
+	text-align: center;
+	text-decoration: none;
+	font-family: "Lato-Regular";
+	padding-top: 8px;
+}
+.basket-account .account img {
+	float: right;
+	margin-right: 15px;
+	margin-top: 7px;
+}
+.end {
+	clear: both;
+}
+.memu {
+	clear: both;
+}
