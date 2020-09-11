@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Product(1)</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">		
+	<script defer type="text/javascript" src="js/catalog.js"></script>
+	<script defer type="text/javascript" src="js/basket.js"></script>
+	<script defer type="text/javascript" src="js/search.js"></script>
+	<script defer type="text/javascript" src="js/vue.js"></script>		
+	<script defer type="text/javascript" src="js/script.js"></script>
+	
+
+
+
+</head>
+<body>	
+	<div class="heder">
+		<div class="top_line">
+		<div class="top">
+			<div class="logo">
+				<a href="../../index.html">
+					<ul>
+						<li><img src="img/logo/18.png" alt=""></li>
+						<li class = "lastletter">bran<span>d</span></li>
+					</ul>
+				</a>
+			</div><!--end logo-->
+			<div class="serch">
+				<div class="serch_wrapp">	
+					<ul class="serch__list">
+						<li class="menu_serch"><a href="#" class="serch-first">Browse </a><img src="img/52.png" alt="" class="point">										
+							<div class="serch__drop">
+							<div class="serch__drop_menu"></div>								
+								<div class="serch__drop-flex">
+									<h3 class="serch__drop-h3">Women</h3>
+									<ul class="serch__drop_ul">
+										<li><a href="" class="serch__drop_a">Dresses</a></li>
+										<li><a href="" class="serch__drop_a">Tops</a></li>
+										<li><a href="" class="serch__drop_a">Sweaters/Knits</a></li>
+										<li><a href="" class="serch__drop_a">Jackets/Coats</a></li>
+										<li><a href="" class="serch__drop_a">Blazers</a></li>
+										<li><a href="" class="serch__drop_a">Denim</a></li>
+										<li><a href="" class="serch__drop_a">Leggings/Pants</a></li>
+										<li><a href="" class="serch__drop_a">Skirts/Shorts</a></li>
+										<li><a href="" class="serch__drop_a">Accessories</a></li>
+									</ul>
+								</div>
+								<div class="serch__drop-flex">
+									<h3 class="serch__drop-h3">Men</h3>
+									<ul class="serch__drop_ul">
+										<li><a href="" class="serch__drop_a">Tees/Tank tops</a></li>
+										<li><a href="" class="serch__drop_a">Shirts/Polos</a></li>
+										<li><a href="" class="serch__drop_a">Sweaters</a></li>
+										<li><a href="" class="serch__drop_a">Sweatshirts/Hoodies</a></li>
+										<li><a href="" class="serch__drop_a">Blazers</a></li>
+										<li><a href="" class="serch__drop_a">Jackets/vests</a></li>			
+									</ul>
+								</div>
+							</div>						
+						</li>
+					</ul>
+				</div>
+				<div class="serch_input">					
+					<search_input :placeholder='inputText'  v-on:input="serchProducts($event)"></search_input>
+					<div href="#" class="serch-last serchButton">
+			<img src="img/59.png" alt="">
+		</div>	
+				</div>									
+			</div><!--end serch-->
+			<div class="basket-account">
+				<div class="basket_div">			
+					<ul>
+						<li class="basket_li"><a href="#" class="basket"><img src="img/1113.png" alt=""></a>
+							<div class="basket_drop">						
+								<div class="basket_drop_menu">
+									<div class="basket_drop_litle_cube"></div>
+									<div class="basket_drop_menu_total"> <p>TOTAL</p> <p>$0.00</p></div>
+									<div class="basket_drop_menu_checkout">
+										<a href="">Checkout</a>
+									</div>
+									<div class="basket_drop_menu_goToCard">
+										<a href="">Go to cart</a>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<a href="" class="basket_point">0</a>
+				</div>				
+				<div>
+					<a href="" class="account"><p>My Account</p><img src="img/1109.png" alt="" class="account-img "></a>
+				</div>
+			</div><!--end basket-account-->
+			<div class="end"></div>	
+		</div>	
+		</div>	
+		<div class="menu">
+			<ul class="center">
+				<li class="menu_list"><a href="../../index.html" class="menu_link">home</a></li>
+				<li class="menu_list">
+					<a href="#" class="menu_link menu-active">man</a>
+				<div class="drop">
+						<div class="drop_flex">
+							<h3 class="drop_h3">Women</h3>
+							<ul class="drop_ul">
+								<li><a href="#" class="drop_a">Dresses</a></li>
+								<li><a href="#" class="drop_a">Tops</a></li>
+								<li><a href="#" class="drop_a">Sweaters/Knits</a></li>
+								<li><a href="#" class="drop_a">Jackets/Coats</a></li>
+								<li><a href="#" class="drop_a">Blazers</a></li>
+								<li><a href="#" class="drop_a">Denim</a></li>
+								<li><a href="#" class="drop_a">Leggings/Pants</a></li>
+								<li><a href="#" class="drop_a">Skirts/Shorts</a></li>
+								<li><a href="#" class="drop_a">Accessories</a></li>
+							</ul>
+						</div>
+						<div class="drop_flex">
+							<h3 class="drop_h3">Women</h3>
+							<ul class="drop_ul">
+								<li><a href="#" class="drop_a">Dresses</a></li>
+								<li><a href="#" class="drop_a">Tops</a></li>
+								<li><a href="#" class="drop_a">Sweaters/Knits</a></li>
+								<li><a href="#" class="drop_a">Jackets/Coats</a></li>							
+							</ul>
+							<h3 class="drop_h3">Women</h3>
+							<ul class="drop_ul">
+								<li><a href="#" class="drop_a">Dresses</a></li>
+								<li><a href="#" class="drop_a">Tops</a></li>
+								<li><a href="#" class="drop_a">Sweaters/Knits</a></li>				
+							</ul>
+						</div>
+						<div class="drop_flex">
+							<h3 class="drop_h3">Women</h3>
+							<ul class="drop_ul">
+								<li><a href="#" class="drop_a">Dresses</a></li>
+								<li><a href="#" class="drop_a">Tops</a></li>
+								<li><a href="#" class="drop_a">Sweaters/Knits</a></li>
+								<li><a href="#" class="drop_a">Jackets/Coats</a></li>					
+							</ul>
+							<div class="drop_sale">
+								<a href="" class="drop_sale_a">											
+									<p class="drop_sale_p">Super<br>sale!</p>
+								</a>
+							</div>							
+						</div>
+					</div>
+				</li>
+				<li class="menu_list"><a href="../pages/Shopping_Cart.html" class="menu_link">women</a></li>
+				<li class="menu_list"><a href="#" class="menu_link">kids</a></li>
+				<li class="menu_list"><a href="#" class="menu_link">accoseriese</a></li>
+				<li class="menu_list"><a href="#" class="menu_link">featured</a></li>
+				<li class="menu_list">
+					<a href="#" class="menu_link">hot deals</a>
+					<div class="drop drop_last">
+						<div class="drop_flex">
+							<h3 class="drop_h3">Women</h3>
+							<ul class="drop_ul">
+								<li><a href="#" class="drop_a">Dresses</a></li>
+								<li><a href="#" class="drop_a">Tops</a></li>
+								<li><a href="#" class="drop_a">Sweaters/Knits</a></li>
+								<li><a href="#" class="drop_a">Jackets/Coats</a></li>
+								<li><a href="#" class="drop_a">Blazers</a></li>
+								<li><a href="#" class="drop_a">Denim</a></li>
+								<li><a href="#" class="drop_a">Leggings/Pants</a></li>
+								<li><a href="#" class="drop_a">Skirts/Shorts</a></li>
+								<li><a href="#" class="drop_a">Accessories</a></li>
+							</ul>
+						</div>
+						<div class="drop_flex">
+							<h3 class="drop_h3">Women</h3>
+							<ul class="drop_ul">
+								<li><a href="#" class="drop_a">Dresses</a></li>
+								<li><a href="#" class="drop_a">Tops</a></li>
+								<li><a href="#" class="drop_a">Sweaters/Knits</a></li>
+								<li><a href="#" class="drop_a">Jackets/Coats</a></li>							
+							</ul>
+							<h3 class="drop_h3">Women</h3>
+							<ul class="drop_ul">
+								<li><a href="#" class="drop_a">Dresses</a></li>
+								<li><a href="#" class="drop_a">Tops</a></li>
+								<li><a href="#" class="drop_a">Sweaters/Knits</a></li>
+								<li><a href="#" class="drop_a">Jackets/Coats</a></li>							
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<section class="arrivas-nav">
+		<nav>
+			<p class="arrivas-left">New Arrivals</p>
+			<p class="arrivas-right"><a href="">Home</a><a href="">/Men</a><a href=""><span>/New Arrivals</span></a></p>			
+		</nav>
+	</section>
+	<main class="main_product">
+		<nav class="category">
+			<details open="open">
+				<summary class="category-1">Category</summary>
+				<ul class="category-list">
+					<li><a href="">Accessories</a></li>
+					<li><a href="">Bags</a></li>
+					<li><a href="">Denim</a></li>
+					<li><a href="">Hoodies & Sweatshirts</a></li>
+					<li><a href="">Jackets & Coats</a></li>
+					<li><a href="">Pants</a></li>
+					<li><a href="">Polos</a></li>
+					<li><a href="">Shirts</a></li>
+					<li><a href="">Shoes</a></li>
+					<li><a href="">Shorts</a></li>
+					<li><a href="">Sweaters & Knits</a></li>
+					<li><a href="">T-Shirts</a></li>
+					<li><a href="">Tanks</a></li>
+				</ul>
+			</details>
+			<details close="close">	
+			<summary class="category-2">BRAND</summary>			
+			</details>
+			<details close="close">	
+			<summary class="category-3">DESIGNER</summary>			
+			</details>
+		</nav>
+		<section class="size_priсe_pics">
+			<nav class="size_priсe">
+				<section>
+					<div class="nav-trending">
+						<h3>Trending now</h3>
+						<div class="nav-trending-model">
+							<ul>
+								<li><a href="">Bohemian</a></li>
+								<li><a href="">Floral</a></li>
+								<li><a href="">Lace</a></li>														
+							</ul>
+							<ul>								
+								<li><a href="">Floral</a></li>
+								<li><a href="">Lace</a></li>
+								<li><a href="">Bohemian</a></li>								
+							</ul>
+						</div>
+					</div>
+					<div class="nav-size">
+						<h3>Size</h3>
+						<div class="nav-size-checkbox">
+							<ul>
+								<li><input type="checkbox"><p>XXS</p></li>
+								<li><input type="checkbox"><p>L</p></li>
+							</ul>
+							<ul>
+								<li><input type="checkbox"><p>XS</p></li>
+								<li><input type="checkbox"><p>XL</p></li>
+							</ul>
+							<ul>										
+								<li><input type="checkbox"><p>S</p></li>
+								<li><input type="checkbox"><p>XXL</p></li>
+							</ul>
+							<ul>
+								<li><input type="checkbox"><p>M</p></li>								
+							</ul>
+						</div>
+					</div>
+					<div class="nav-prise">
+						<h3>PRICE</h3>
+						<input type="range" min="0" max="600" step="10" value="65">
+						<div>
+							<p>$52</p>
+							<p>$400</p>
+						</div>
+					</div>
+				</section>
+				<footer class="nav-footer">
+					<div class="nav-footer-left">
+						<p>Sort By</p>
+						<select>
+							<option>Name</option>
+						</select>						
+					</div>
+					<div class="nav-footer-right">
+						<p>Show</p>
+						<select>
+							<option>09</option>
+							<option>12</option>
+							<option>15</option>
+							<option>18</option>
+						</select>
+				</footer>
+			</nav>	
+			<section>
+		<div class="Product-pic"></div>	
+		</section>	
+		<nav class="page-list">
+			<ul>
+				<li><a href="" class="page-list-next page-list-free"><</a></li>
+				<li><a href="" class="page-list-active">1</a></li>
+				<li><a href="" class="page-list-free">2</a></li>
+				<li><a href="" class="page-list-free">3</a></li>
+				<li><a href="" class="page-list-free">4</a></li>
+				<li><a href="" class="page-list-free">5</a></li>
+				<li><a href="" class="page-list-free">6.....20</a></li>
+				<li><a href="" class="page-list-active page-list-next">></a></li>
+			</ul>
+			<a href="" class="button-view">View All</a>
+		</nav>		
+		</section>		
+	</main>	
+	<article class="servise">
+			<div class="servise-block">
+				<div> 
+					<a href="" class="servise-block-img"><img src="img/offer/1330.png" alt=""></a>
+					<a href="" class="servise-block-text">Free Delivery</a>
+					<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+				</div>
+				<div>
+					<a href=""><img src="img/offer/1340.png" alt=""></a>
+					<a href="" class="servise-block-text">Sales & discounts</a>
+					<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+				</div>
+				<div>
+					<a href=""><img src="img/offer/1341.png" alt=""></a>
+					<a href="" class="servise-block-text">Quality assurance</a>
+					<p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+				</div>
+			</div>
+		</article>	
+<section class="subscribe-product">
+	<article>
+		<div class="subscribe-left">
+			<img src="img/subscribe/2206.png" alt="">
+			<div class="subscribe-left-text">
+				<p>
+					“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+				</p>
+				<p>
+					<span>Bin Burhan</span><br>
+					Dhaka, Bd
+				</p>
+			</div>
+		</div>
+		<div class="subscribe-right">
+			<div>
+				<p><span>Subscribe</span><br>FOR OUR NEWLETTER AND PROMOTION</p>
+			</div>
+			<form class="subscribe-right-email">
+				<input type="email" name = "email" placeholder="Enter Your Email" required pattern><input type="submit" name="button" value="Subscribe">
+			</form>
+		</div>
+	</article>		
+	</section>
+		<footer class="footer">
+		<section class="footer-up">
+			<article class="footer-brend">
+				<article class="footer-brend-img">
+				<a href="../../index.html">
+					<ul>
+						<li><img src="img/logo/18.png" alt=""></li>
+						<li class = "lastletter">bran<span>d</span></li>
+					</ul>
+				</a>
+			</article><!--end logo-->					
+					<article class="footer-brend-text">
+						<p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships.</p>
+						<p>Efficiently plagiarize 24/365 action items and focused infomediaries. Distinctively seize superior initiatives for wireless technologies. Dynamically optimize.</p>
+					</article>			
+			</article>
+			<section class="footer-company">
+				<h3>COMPANY</h3>
+				<nav>
+					<ul>
+						<li><a href="">Home</a></li>
+						<li><a href="">Shop</a></li>
+						<li><a href="">About</a></li>
+						<li><a href="">How It Works</a></li>
+						<li><a href="">Contact</a></li>
+					</ul>
+				</nav>
+			</section>
+			<section class="footer-information">
+				<h3>INFORMATION</h3>
+				<nav>
+					<ul>
+						<li><a href="">Tearms & Condition</a></li>
+						<li><a href="">Privacy Policy</a></li>
+						<li><a href="">How to Buy</a></li>
+						<li><a href="">How to Sell</a></li>
+						<li><a href="">Promotion</a></li>
+					</ul>
+				</nav>
+			</section>
+			<section class="footer-category">
+				<h3>SHOP CATEGORY</h3>
+				<nav>
+					<ul>
+						<li><a href="">Men</a></li>
+						<li><a href="">Women</a></li>
+						<li><a href="">Child</a></li>
+						<li><a href="">Apparel</a></li>
+						<li><a href=""> Brows All</a></li>
+					</ul>
+				</nav>
+			</section>
+			
+		</section>
+		<section class="footer-down">
+			<article>
+				<div class="footer-down-copyrite"><p>&copy 2020 Brand All Rights Reserved.</p></div>
+				<div class="footer-down-social">
+					<ul>
+						<li><a href=""><i class="fab fa-facebook-f facebook"></i></a></li>
+						<li><a href=""><i class="fab fa-twitter twitter"></i></a></li>
+						<li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+						<li><a href=""><i class="fab fa-pinterest-p pinterest"></i></a></li>
+						<li><a href=""><i class="fab fa-google-plus-g google-plus"></i></a></li>
+					</ul>
+				</div>
+			</article>			
+		</section>
+	</footer>
+	<script src="https://kit.fontawesome.com/285c9e674b.js" crossorigin="anonymous"></script>
+	<script defer="" type="text/javascript" src="js/basket.js"></script>		
+</body>
+</html>
